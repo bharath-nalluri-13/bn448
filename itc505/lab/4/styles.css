@@ -1,4 +1,4 @@
-/* Reset some default styles for browsers */
+/* Resetting some default styles for browsers */
 body,
 h1,
 h2,
@@ -11,7 +11,7 @@ ol {
 
 /* Set a background color for the entire essay */
 body {
-  background-color: #9bf19e; /* A beautiful background color */
+  background-color: #9bf19e;
   font-family: Arial, sans-serif;
   margin: 20px;
   padding: 20px;
@@ -27,24 +27,24 @@ article {
 
 /* Style headings */
 h1 {
-  font-size: 24px; /* Slightly smaller font size */
-  color: #9d0606; /* Red color for h1 */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add text shadow to h1 */
+  font-size: 24px;
+  color: #9d0606;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add text shadow*/
   margin-top: 20px;
   margin-bottom: 10px;
 }
 
 h2 {
-  font-size: 20px; /* Slightly smaller font size */
-  color: #266af2; /* Blue color for h2 */
+  font-size: 20px;
+  color: #266af2;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add text shadow to h2 */
   margin-top: 20px;
   margin-bottom: 10px;
 }
 
 h3 {
-  font-size: 18px; /* Slightly smaller font size */
-  color: #50a2a7; /* Teal color for h3 */
+  font-size: 18px;
+  color: #50a2a7;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add text shadow to h3 */
   margin-top: 20px;
   margin-bottom: 10px;
@@ -52,16 +52,16 @@ h3 {
 
 /* Style paragraphs */
 p {
-  font-size: 16px; /* Slightly smaller font size */
+  font-size: 16px;
   line-height: 1.6;
-  color: #444; /* Dark Gray color for paragraphs */
+  color: #444;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
 /* Style hyperlinks */
 a {
-  color: #007bff; /* Blue color for hyperlinks */
+  color: #007bff;
   text-decoration: none;
 }
 
@@ -71,7 +71,5 @@ a:hover {
 
 /* Color for strong elements */
 strong {
-  color: #333; /* Slightly darker text */
+  color: #333;
 }
-
-
