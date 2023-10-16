@@ -11,7 +11,7 @@ ol {
 
 /* Set a background color for the entire essay */
 body {
-  background-color: #9bf19e;
+  background-color: #375e3c;
   font-family: Arial, sans-serif;
   margin: 20px;
   padding: 20px;
@@ -28,7 +28,8 @@ article {
 /* Style headings */
 h1 {
   font-size: 24px;
-  color: #9d0606;
+  font-family: verdana, Geneva, Tahoma, sans-serif;
+  color: #375e3c;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add text shadow*/
   margin-top: 20px;
   margin-bottom: 10px;
@@ -36,7 +37,7 @@ h1 {
 
 h2 {
   font-size: 20px;
-  color: #266af2;
+  color: #4b9054;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add text shadow to h2 */
   margin-top: 20px;
   margin-bottom: 10px;
@@ -44,7 +45,7 @@ h2 {
 
 h3 {
   font-size: 18px;
-  color: #50a2a7;
+  color: #0fb725;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add text shadow to h3 */
   margin-top: 20px;
   margin-bottom: 10px;
