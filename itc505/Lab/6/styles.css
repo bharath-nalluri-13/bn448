@@ -3,7 +3,7 @@ html {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: "Arial", sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Change the font to Segoe UI or a similar sans-serif font */
 }
 
 .container {
@@ -17,7 +17,7 @@ html {
 header,
 footer {
   grid-column: 1 / -1;
-  background-color: #4285f4;
+  background-color: #4c8bf5; /* Change the header and footer background color */
   color: #fff;
   padding: 1em;
   text-align: center;
@@ -25,25 +25,27 @@ footer {
 
 .sidebar {
   grid-area: sidebar;
-  background-color: #34a853;
+  background-color: #4285f4; /* Change the sidebar background color */
   padding: 2em;
 }
 
 .sidebar ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .sidebar a {
   text-decoration: none;
-  color: #333;
+  color: #fff; /* Change the link text color */
   display: block;
-  padding: 0.5em;
-  border-bottom: 1px solid #ccc;
+  padding: 0.7em;
+  border-bottom: 1px solid #fff;
+  transition: background-color 0.3s ease;
 }
 
 .sidebar a:hover {
-  background-color: #ddd;
+  background-color: #2d5f99; /* Darker blue on hover */
 }
 
 .content {
@@ -52,7 +54,7 @@ footer {
 }
 
 .game {
-  background-color: #f9f9f9; /* Light gray background color */
+  background-color: #f3f3f3; /* Light gray background color */
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -67,7 +69,7 @@ footer {
 }
 
 button {
-  background-color: #4285f4;
+  background-color: #4c8bf5; /* Change the button background color */
   color: #fff;
   padding: 10px 20px;
   font-size: 16px;
@@ -97,7 +99,7 @@ button:hover {
   cursor: pointer;
   transition: background-color 0.3s ease;
   display: block;
-  margin: 0 auto; /* Center the button */
+  margin: 0 auto;
 }
 
 #play-again:hover {
@@ -106,8 +108,8 @@ button:hover {
 
 .advertisement {
   grid-area: advertisement;
-  background-color: #4285f4;
-  padding: 0; /* Remove padding to match the size of the sidebar */
+  background-color: #4c8bf5; /* Change the advertisement background color */
+  padding: 1em; /* Add padding to match the size of the sidebar */
   text-align: center;
   color: #fff;
 }
@@ -118,18 +120,48 @@ button:hover {
 }
 
 .ad-image-container {
-  max-width: 100%; /* Ensure the image does not exceed its container */
+  max-width: 100%;
 }
 
 .ad-image-container img {
   width: 100%;
   height: auto;
-  object-fit: cover; /* Ensure the image covers the entire container without stretching */
+  object-fit: cover;
 }
 
 footer {
-  background-color: #4285f4;
+  background-color: #4c8bf5; /* Change the footer background color */
   color: #fff;
   padding: 1em;
   text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  /* Adjustments for smaller screens */
+
+  .container {
+    grid-template-columns: 1fr; /* Change to a single column layout for small screens */
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "content"
+      "advertisement"
+      "footer";
+  }
+
+  .sidebar {
+    border-right: none; /* Remove border between sidebar and content on small screens */
+  }
+
+  .choices {
+    flex-direction: column; /* Stack buttons vertically for small screens */
+  }
+
+  button {
+    width: 100%; /* Make buttons full width on small screens */
+  }
+
+  .advertisement {
+    padding: 2em; /* Increase padding on smaller screens */
+  }
 }
