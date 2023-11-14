@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>ITC Car Rentals</title>
+  </head>
+  <body>
+    <header>
+      <h1>ITC Car Rentals</h1>
+    </header>
+    <div id="story">
+      <p>
+        Welcome to ITC Car Rentals! The Safest Car Rentals in the Business.
+        Start Renting a Car with variety of options for you.
+      </p>
+    </div>
+    <button id="rent-now-button" onclick="startGame()">Rent Now</button>
+    <div id="choices"></div>
+    <div class="driving-tip" id="driving-tip"></div>
+    <div id="image-container">
+      <img id="story-image" src="" alt="Adventure Image" />
+    </div>
+    <div class="driving-tip" id="driving-tip"></div>
+    <button
+      style="display: none"
+      id="rent-another-car-button"
+      onclick="startGame()"
+    >
+      Rent Another Car
+    </button>
+    <button id="restart-button" onclick="restartGame()">Restart Renting</button>
+
+    <script src="script.js"></script>
+    <script>
+      // Ensure that startGame is called when the page loads
+      window.onload = startGame;
+    </script>
+
+    <footer>
+      <p style="text-align: center">
+        <strong><u>ADDENDUM</u></strong>
+      </p>
+      <p>
+        <strong>Development Process Overview:</strong>
+        <br />
+        The creation of the ITC Car Rentals interactive experience involved a
+        meticulous process to craft a dynamic and engaging storyline. The
+        journey began with the conceptualization of different scenarios and
+        choices, each contributing to a unique user experience. Implementation
+        involved coding a series of interconnected stages with branching
+        narratives, providing users with a personalized and immersive car rental
+        adventure.
+      </p>
+
+      <p>
+        <strong>Creative Choices:</strong>
+        <br />
+        Visual elements were carefully chosen to complement each stage of the
+        story, creating a visually appealing and cohesive narrative. The use of
+        descriptive and inviting language aimed to draw users into the world of
+        ITC Car Rentals, ensuring that the interactive elements aligned with the
+        brand's identity. The decision to include driving tips at relevant
+        points aimed to blend entertainment with practical information.
+      </p>
+
+      <p>
+        <strong>Challenges Faced and Solutions:</strong>
+        <br />
+        The development journey was not without its challenges. One significant
+        hurdle was managing the complexity introduced by the branching narrative
+        structure. As the number of scenarios and choices increased, ensuring a
+        seamless transition between stages became paramount. Iterative testing
+        and debugging were crucial in identifying and addressing potential
+        bottlenecks in the user experience.
+      </p>
+
+      <p>
+        Another challenge emerged in maintaining code modularity and
+        readability. With the expansion of the interactive storyline, codebase
+        complexity naturally increased. This prompted a rigorous refactoring
+        process to enhance modularity, making the code more maintainable and
+        scalable. The introduction of clear commenting and documentation further
+        facilitated collaboration and future development efforts.
+      </p>
+
+      <p>
+        In terms of user engagement, striking a balance between narrative-driven
+        content and meaningful choices presented an ongoing challenge. Too much
+        emphasis on narrative could risk user disengagement, while too many
+        choices might overwhelm users. Continuous user testing and feedback
+        played a pivotal role in refining the balance, resulting in a more
+        harmonious and engaging user experience.
+      </p>
+
+      <p>
+        Adaptability across various devices and screen sizes introduced
+        compatibility challenges. Ensuring a consistent and appealing display on
+        both desktop and mobile platforms required meticulous testing and
+        adjustments to the responsive design elements. The use of media queries
+        and responsive design practices addressed this challenge, enhancing the
+        overall accessibility of the interactive experience.
+      </p>
+
+    
+      <p>
+        <strong>Insights Gained:</strong>
+        <br />
+        User engagement and decision-making processes provided valuable insights
+        during development. Observing user interactions and feedback led to
+        refinements in the narrative structure, emphasizing the significance of
+        user agency in shaping the story. This iterative process highlighted the
+        importance of striking a balance between narrative-driven engagement and
+        providing meaningful choices for users.
+      </p>
+
+      <p>
+        <strong>Flow of Scenarios and Choices:</strong>
+      </p>
+
+      <ol>
+        <li>
+          <strong>Starting Point:</strong>
+          <br />
+          Users begin the journey with a welcome message and a single choice to
+          "Rent Now."
+        </li>
+
+        <li>
+          <strong>Standard Car Selection:</strong>
+          <br />
+          Users choose between a standard car. If they choose "Yes, please," it
+          leads to an insurance options scenario. If they choose "No, thanks,"
+          it branches to a scenario inquiring about the presence of kids in the
+          car.
+        </li>
+
+        <li>
+          <strong>Insurance Options:</strong>
+          <br />
+          Users decide between "Damage Waiver" and "Damage Waiver + Liability,"
+          leading to a scenario expressing gratitude for the insurance
+          selection.
+        </li>
+
+        <li>
+          <strong>No Insurance (Kids in the Car):</strong>
+          <br />
+          Users decide whether there are kids in the car or not, leading to
+          scenarios insisting on insurance for kids or allowing the journey
+          without insurance.
+        </li>
+
+        <li>
+          <strong>SUV Selection:</strong>
+          <br />
+          Users choose between being the only driver or needing to add more
+          drivers, leading to scenarios related to car type selection or adding
+          more drivers based on user choices.
+        </li>
+
+        <li>
+          <strong>Gas or Electric SUV:</strong>
+          <br />
+          Users choose between a gas-powered SUV and an electric SUV, leading to
+          a scenario encouraging a safe ride.
+        </li>
+
+        <li>
+          <strong>Adding More Drivers:</strong>
+          <br />
+          Users decide the age of the additional driver, leading to a scenario
+          resulting in either a safe ride message or a sorry message for drivers
+          under 21.
+        </li>
+
+        <li>
+          <strong>Ending Scenario:</strong>
+          <br />
+          Users reach an ending scenario with a safe and enjoyable journey
+          message.
+        </li>
+
+        <li>
+          <strong>Restart Option:</strong>
+          <br />
+          Users have the option to restart the game, bringing them back to the
+          starting point.
+        </li>
+      </ol>
+    </footer>
+  </body>
+</html>
