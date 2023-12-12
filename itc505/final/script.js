@@ -87,7 +87,12 @@ function initializeBoard() {
     const randomRow = Math.floor(Math.random() * 5);
     const randomCol = Math.floor(Math.random() * 5);
     toggleCell(randomRow, randomCol);
+    clickCount++; // Increment the click count for each simulated click
   }
+
+  // Reset the click count to 0 after the initial random clicks
+  clickCount = 0;
+  document.getElementById("clickCount").innerText = clickCount;
 }
 
 window.addEventListener("load", initializeBoard);
