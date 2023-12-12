@@ -62,15 +62,15 @@ function displayWinMessage() {
       document.getElementById("clickCount").innerText = clickCount;
     }
   });
-}
 
-// Reset the game after the user clicks OK
-setTimeout(() => {
-  winMessage.remove();
-  initializeBoard();
-  clickCount = 0;
-  document.getElementById("clickCount").innerText = clickCount;
-}, 1000);
+  // Reset the game after the user clicks OK
+  setTimeout(() => {
+    modal.remove();
+    initializeBoard();
+    clickCount = 0;
+    document.getElementById("clickCount").innerText = clickCount;
+  }, 1000);
+}
 
 function initializeBoard() {
   const board = document.getElementById("board");
