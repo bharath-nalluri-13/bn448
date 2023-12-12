@@ -62,14 +62,6 @@ function displayWinMessage() {
       document.getElementById("clickCount").innerText = clickCount;
     }
   });
-
-  // Reset the game after the user clicks OK
-  setTimeout(() => {
-    modal.remove();
-    initializeBoard();
-    clickCount = 0;
-    document.getElementById("clickCount").innerText = clickCount;
-  }, 1000);
 }
 
 function initializeBoard() {
@@ -78,18 +70,7 @@ function initializeBoard() {
   clickCount = 0;
   document.getElementById("clickCount").innerText = clickCount;
 
-  // Pattern lookup for the final row
-  const patternLookup = [
-    "...+.",
-    ".+..+",
-    "+....",
-    "...++",
-    "....+",
-    "..+..",
-    ".+.+.",
-    ".++..",
-  ];
-
+  // Create a 5x5 grid with all cells turned off initially
   for (let i = 0; i < 5; i++) {
     for (let j = 0; j < 5; j++) {
       const cell = document.createElement("div");
@@ -97,21 +78,15 @@ function initializeBoard() {
       cell.id = `cell-${i}-${j}`;
       cell.addEventListener("click", () => toggleCell(i, j));
 
-      // Set the lights based on the pattern lookup
-      if (patternLookup[4 - i][j] === "+") {
-        toggleSingleCell(i, j);
-      }
-
       board.appendChild(cell);
     }
   }
-}
 
-  // Initialize the game with a random but solvable configuration
-  for (let i = 0; i < 8; i++) {
+  // Simulate random clicks on the board to create a solvable puzzle
+  for (let i = 0; i < 10; i++) {
     const randomRow = Math.floor(Math.random() * 5);
     const randomCol = Math.floor(Math.random() * 5);
-    toggleSingleCell(randomRow, randomCol);
+    toggleCell(randomRow, randomCol);
   }
 }
 
